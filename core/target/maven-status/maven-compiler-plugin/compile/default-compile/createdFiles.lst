@@ -1,5 +1,6 @@
 com/mysite/core/listeners/SimpleResourceListener.class
 com/mysite/core/filters/package-info.class
+com/mysite/core/models/Cards.class
 com/mysite/core/schedulers/package-info.class
 com/mysite/core/schedulers/SimpleScheduledTask.class
 com/mysite/core/servlets/package-info.class
@@ -8,6 +9,7 @@ com/mysite/core/schedulers/SimpleScheduledTask$Config.class
 com/mysite/core/models/Hero.class
 com/mysite/core/listeners/package-info.class
 com/mysite/core/models/package-info.class
+com/mysite/core/models/Cards$CardItem.class
 com/mysite/core/servlets/SimpleServlet.class
 com/mysite/core/filters/LoggingFilter.class
 com/mysite/core/resources/ResourceTypes.class

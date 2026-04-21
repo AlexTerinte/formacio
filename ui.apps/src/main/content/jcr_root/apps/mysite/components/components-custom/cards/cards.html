@@ -1,0 +1,70 @@
+<!--/*
+    Album Cards Component
+    Component: album-cards
+    Version:   v1.0.0
+    AEM:       AEM as a Cloud Service
+*/-->
+<sly data-sly-use.model="com.mysite.core.models.Cards"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<!--/* Placeholder shown in edit mode when there are no cards */-->
+<sly data-sly-call="${templates.placeholder @ isEmpty=model.empty}"/>
+
+<section class="album-cards" data-sly-test="${!model.empty}">
+    <div class="album-cards__grid">
+
+        <!--/* Iterate over each card item */-->
+        <article class="album-cards__card"
+                 data-sly-list.card="${model.cards}">
+
+            <!--/* Thumbnail */-->
+            <div class="album-cards__thumbnail">
+                <img class="album-cards__thumbnail-img"
+                     src="${card.imageUrl @ context='uri'}"
+                     alt="${card.imageAlt @ context='text'}"
+                     loading="lazy"
+                     data-sly-test="${card.imageUrl}"/>
+                <!--/* Fallback placeholder when no image is set */-->
+                <div class="album-cards__thumbnail-placeholder"
+                     data-sly-test="${!card.imageUrl}">
+                    <span>Thumbnail</span>
+                </div>
+            </div>
+
+            <!--/* Card body */-->
+            <div class="album-cards__body">
+
+                <p class="album-cards__description"
+                   data-sly-test="${card.description}">
+                    ${card.description @ context='html'}
+                </p>
+
+                <!--/* Footer: actions + reading time */-->
+                <footer class="album-cards__footer">
+
+                    <div class="album-cards__actions"
+                         data-sly-test="${card.viewLink || card.editLink}">
+                        <a class="album-cards__action-btn"
+                           href="${card.viewLink @ context='uri'}"
+                           data-sly-test="${card.viewLink}">
+                            View
+                        </a>
+                        <a class="album-cards__action-btn"
+                           href="${card.editLink @ context='uri'}"
+                           data-sly-test="${card.editLink}">
+                            Edit
+                        </a>
+                    </div>
+
+                    <span class="album-cards__reading-time"
+                          data-sly-test="${card.readingTime}">
+                        ${card.readingTime @ context='text'} mins
+                    </span>
+
+                </footer>
+
+            </div>
+        </article>
+
+    </div>
+</section>
