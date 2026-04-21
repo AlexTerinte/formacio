@@ -1,14 +1,8 @@
-// =============================================================================
-// Album Cards – album-cards.scss
-// Component: album-cards | AEM as a Cloud Service
-// =============================================================================
 
-// ----- Component -----
 .album-cards {
   background-color: $cards-section-bg;
   padding: $section-padding-y 1.5rem;
 
-  // ----- Grid -----
   &__grid {
     max-width: $container-max-width;
     margin: 0 auto;
@@ -25,7 +19,6 @@
     }
   }
 
-  // ----- Card -----
   &__card {
     background-color: $card-bg;
     border: 1px solid $card-border;
@@ -41,11 +34,10 @@
     }
   }
 
-  // ----- Thumbnail -----
   &__thumbnail {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; // 16:9
+    padding-top: 56.25%;
     background-color: $card-thumbnail-bg;
     overflow: hidden;
     flex-shrink: 0;
@@ -71,7 +63,6 @@
     font-size: 0.9375rem;
   }
 
-  // ----- Body -----
   &__body {
     display: flex;
     flex-direction: column;
@@ -93,7 +84,6 @@
     }
   }
 
-  // ----- Footer -----
   &__footer {
     display: flex;
     align-items: center;

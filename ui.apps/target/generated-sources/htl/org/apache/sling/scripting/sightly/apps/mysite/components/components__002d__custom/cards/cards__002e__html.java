@@ -37,10 +37,9 @@ public final class cards__002e__html extends RenderUnit {
 Object _global_model = null;
 Object _global_templates = null;
 Collection var_collectionvar3_list_coerced$ = null;
-out.write("\n");
 _global_model = renderContext.call("use", com.mysite.core.models.Cards.class.getName(), obj());
 _global_templates = renderContext.call("use", "core/wcm/components/commons/v1/templates.html", obj());
-out.write("\n\n\n");
+out.write("\n\n");
 {
     Object var_templatevar0 = renderContext.getObjectModel().resolveProperty(_global_templates, "placeholder");
     {
@@ -55,7 +54,7 @@ out.write("\n\n");
 {
     boolean var_testvariable2 = (!renderContext.getObjectModel().toBoolean(renderContext.getObjectModel().resolveProperty(_global_model, "empty")));
     if (var_testvariable2) {
-        out.write("<section class=\"album-cards\">\n    <div class=\"album-cards__grid\">\n\n        \n        ");
+        out.write("<section class=\"album-cards\">\n    ");
         {
             Object var_collectionvar3 = renderContext.getObjectModel().resolveProperty(_global_model, "cards");
             {
@@ -68,7 +67,7 @@ out.write("\n\n");
                             {
                                 boolean var_validstartstepend9 = (((0 < var_size4) && true) && (var_end8 > 0));
                                 if (var_validstartstepend9) {
-                                    out.write("<article class=\"album-cards__card\">");
+                                    out.write("<div class=\"album-cards__grid\">");
                                     if (var_collectionvar3_list_coerced$ == null) {
                                         var_collectionvar3_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar3);
                                     }
@@ -77,7 +76,7 @@ out.write("\n\n");
                                         {
                                             boolean var_traversal12 = (((var_index10 >= 0) && (var_index10 <= var_end8)) && true);
                                             if (var_traversal12) {
-                                                out.write("\n\n            \n            <div class=\"album-cards__thumbnail\">\n                ");
+                                                out.write(" \n        <article class=\"album-cards__card\">\n            <div class=\"album-cards__thumbnail\">\n                ");
                                                 {
                                                     Object var_testvariable13 = renderContext.getObjectModel().resolveProperty(card, "imageUrl");
                                                     if (renderContext.getObjectModel().toBoolean(var_testvariable13)) {
@@ -119,14 +118,14 @@ out.write("\n\n");
                                                         out.write(" loading=\"lazy\"/>");
                                                     }
                                                 }
-                                                out.write("\n                \n                ");
+                                                out.write("\n                ");
                                                 {
                                                     boolean var_testvariable22 = (!renderContext.getObjectModel().toBoolean(renderContext.getObjectModel().resolveProperty(card, "imageUrl")));
                                                     if (var_testvariable22) {
                                                         out.write("<div class=\"album-cards__thumbnail-placeholder\">\n                    <span>Thumbnail</span>\n                </div>");
                                                     }
                                                 }
-                                                out.write("\n            </div>\n\n            \n            <div class=\"album-cards__body\">\n\n                ");
+                                                out.write("\n            </div>\n            <div class=\"album-cards__body\">\n                ");
                                                 {
                                                     Object var_testvariable23 = renderContext.getObjectModel().resolveProperty(card, "description");
                                                     if (renderContext.getObjectModel().toBoolean(var_testvariable23)) {
@@ -138,7 +137,7 @@ out.write("\n\n");
                                                         out.write("</p>");
                                                     }
                                                 }
-                                                out.write("\n\n                \n                <footer class=\"album-cards__footer\">\n\n                    ");
+                                                out.write("\n                <footer class=\"album-cards__footer\">\n                    ");
                                                 {
                                                     Object var_testvariable25 = ((renderContext.getObjectModel().toBoolean(renderContext.getObjectModel().resolveProperty(card, "viewLink")) ? renderContext.getObjectModel().resolveProperty(card, "viewLink") : renderContext.getObjectModel().resolveProperty(card, "editLink")));
                                                     if (renderContext.getObjectModel().toBoolean(var_testvariable25)) {
@@ -195,7 +194,7 @@ out.write("\n\n");
                                                         out.write("\n                    </div>");
                                                     }
                                                 }
-                                                out.write("\n\n                    ");
+                                                out.write("\n                    ");
                                                 {
                                                     Object var_testvariable36 = renderContext.getObjectModel().resolveProperty(card, "readingTime");
                                                     if (renderContext.getObjectModel().toBoolean(var_testvariable36)) {
@@ -207,12 +206,12 @@ out.write("\n\n");
                                                         out.write("</span>");
                                                     }
                                                 }
-                                                out.write("\n\n                </footer>\n\n            </div>\n        ");
+                                                out.write("\n                </footer>\n            </div>\n        </article>\n    ");
                                             }
                                         }
                                         var_index10++;
                                     }
-                                    out.write("</article>");
+                                    out.write("</div>");
                                 }
                             }
                         }
@@ -221,7 +220,7 @@ out.write("\n\n");
             }
             var_collectionvar3_list_coerced$ = null;
         }
-        out.write("\n\n    </div>\n</section>");
+        out.write("\n</section>");
     }
 }
 

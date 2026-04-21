@@ -61,7 +61,7 @@ out.write("\n \n<section class=\"album-hero\">\n    <div class=\"album-hero__inn
         out.write("</h1>");
     }
 }
-out.write("\n\n        ");
+out.write("\n        ");
 {
     Object var_testvariable4 = renderContext.getObjectModel().resolveProperty(_global_model, "description");
     if (renderContext.getObjectModel().toBoolean(var_testvariable4)) {
@@ -73,11 +73,11 @@ out.write("\n\n        ");
         out.write("</p>");
     }
 }
-out.write("\n \n        ");
+out.write("\n        ");
 {
     Object var_testvariable6 = ((renderContext.getObjectModel().toBoolean(renderContext.getObjectModel().resolveProperty(_global_model, "primaryCtaLabel")) ? renderContext.getObjectModel().resolveProperty(_global_model, "primaryCtaLabel") : renderContext.getObjectModel().resolveProperty(_global_model, "secondaryCtaLabel")));
     if (renderContext.getObjectModel().toBoolean(var_testvariable6)) {
-        out.write("<div class=\"album-hero__actions\">\n \n            ");
+        out.write("<div class=\"album-hero__actions\">\n            ");
         {
             Object var_testvariable7 = renderContext.getObjectModel().resolveProperty(_global_model, "primaryCtaLabel");
             if (renderContext.getObjectModel().toBoolean(var_testvariable7)) {
@@ -107,7 +107,7 @@ out.write("\n \n        ");
                 out.write("</a>");
             }
         }
-        out.write("\n \n            ");
+        out.write("\n            ");
         {
             Object var_testvariable13 = renderContext.getObjectModel().resolveProperty(_global_model, "secondaryCtaLabel");
             if (renderContext.getObjectModel().toBoolean(var_testvariable13)) {
@@ -137,7 +137,7 @@ out.write("\n \n        ");
                 out.write("</a>");
             }
         }
-        out.write("\n \n        </div>");
+        out.write("\n        </div>");
     }
 }
 out.write("\n    </div>\n</section>");
